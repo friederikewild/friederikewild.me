@@ -46,7 +46,7 @@ googleAnalytics = "UA-49040977-4"
     position = "Entrepreneur / Android Engineer / Wellbeing Coach"
     livesIn = "[London, United Kingdom](https://www.google.co.uk/maps/place/WeWork+London+Fields/)"
     scope = [
-        "Android Development for [Pvlse](#)",
+#        "Android Development for [Pvlse](#)",
         "Coach for [Eye Wellbeing](https://eyewellbeing.com/)",
         "Android Development for [still waitin - Deb Manager for Android](https://play.google.com/store/apps/details?id=de.devmob.stillwaitin)",
 #        "Android Development for [fruit](#)",
