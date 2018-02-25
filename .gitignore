@@ -1,0 +1,10 @@
+.DS_Store
+Thumbs.db
+public/
+.idea
+db.json
+*.log
+node_modules/
+npm-debug.log
+package-lock.json
+nohup.out
