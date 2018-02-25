@@ -1,4 +1,4 @@
-baseURL = "https://friederikewild.me"
+baseURL = "/"
 languageCode = "en-us"
 title = "Friederike Wild / Entrepreneur / Android Engineer / Wellbeing Coach"
 theme = "hugo-identity-theme"
