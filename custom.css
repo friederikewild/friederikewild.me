@@ -1,0 +1,55 @@
+/*
+Update inside themes/hugo-identity-theme/static/assets with custom libs/_vars.scss
+$ sass sass/main.scss css/main.css
+
+Include here all parts changed via
+accent1, accent2 and highlight
+
+ Updated Palette:
+      accent1:            #f2994a,
+      accent2:            #f2c94c,
+      highlight:          #2979ff
+
+      link color: 		  #0d47a1;
+*/
+
+
+#main a {
+    color: #0d47a1;
+}
+
+a:hover {
+    color: #f2c94c;
+}
+
+#main a:hover {
+    color: #2979ff;
+}
+
+textarea:focus {
+    border-color: #2979ff;
+}
+
+input[type="radio"]:checked + label:before {
+    color: #2979ff;
+}
+
+input[type="radio"]:focus + label:before {
+    border-color: #2979ff;
+}
+
+
+ul.icons li a:hover:before {
+	text-shadow: 1.25px 0px 0px #2979ff, -1.25px 0px 0px #2979ff, 0px 1.25px 0px #2979ff, 0px -1.25px 0px #2979ff;
+}
+
+ul.icons li a:hover {
+	border-color: #2979ff;
+
+}
+
+
+.button:hover {
+    border-color: #2979ff;
+    color: #2979ff !important;
+}
