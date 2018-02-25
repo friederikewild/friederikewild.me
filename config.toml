@@ -1,3 +1,8 @@
-baseURL = "https://friederikewild.me/"
+baseURL = "https://friederikewild.me"
 languageCode = "en-us"
 title = "Friederike Wild / Entrepreneur / Android Engineer / Wellbeing Coach"
+theme = "hugo-identity-theme"
+
+# Disable unnecessary kinds
+disableKinds = ["section", "taxonomy", "taxonomyTerm", "RSS", "sitemap", "robotsTXT"]
+
