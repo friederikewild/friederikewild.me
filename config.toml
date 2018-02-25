@@ -19,12 +19,12 @@ googleAnalytics = "UA-49040977-4"
   # Site icons
   favicon_ico = "favicon.ico"
   favicon_ico_sizes = "16x16 32x32"
-  appleicon = "apple.png"
+  appleicon = "apple-touch-icon.png"
 
   # Additional options to supplement icons served
-  #favicon_png = "favicon.png"
-  #favicon_png_sizes = "96x96"
-  #favicon_svg = "favicon.svg"
+  favicon_png = "favicon.png"
+  favicon_png_sizes = "96x96 256x256"
+  favicon_svg = "favicon.svg"
 
   # Link custom assets relative to /static
   #custom_js  = [""]
