@@ -6,3 +6,156 @@ theme = "hugo-identity-theme"
 # Disable unnecessary kinds
 disableKinds = ["section", "taxonomy", "taxonomyTerm", "RSS", "sitemap", "robotsTXT"]
 
+
+# Enter your tracking code to enable Google Analytics
+googleAnalytics = "UA-49040977-4"
+
+
+[params]
+
+  # Images settings
+  # Icons, backgrounds and avatars folders are placed in theme's static/images folder.
+
+  # Site icons
+  favicon_ico = "favicon.ico"
+  favicon_ico_sizes = "16x16 32x32"
+  appleicon = "apple.png"
+
+  # Additional options to supplement icons served
+  #favicon_png = "favicon.png"
+  #favicon_png_sizes = "96x96"
+  #favicon_svg = "favicon.svg"
+
+  # Link custom assets relative to /static
+  #custom_js  = [""]
+  #custom_css = ["background.css", "icons.css"]
+ 
+
+  # Customization switches
+  # Overwrite FontAwesome: see icons.css
+  #custom_icons = true
+  # Overwrite background: see background.css
+  #custom_background = true
+
+  # Personal data
+  [params.personal]
+    # If name is not set, author is used
+    name = "Friederike Wild"
+    # Avatars can be written to images/avatars/
+    avatar = "fwild_circle.png"
+    position = "Entrepreneur / Android Engineer / Wellbeing Coach"
+    livesIn = "[London, United Kingdom](https://www.google.co.uk/maps/place/WeWork+London+Fields/)"
+    scope = [
+        "Android Development for [Pvlse](#)",
+        "Coach for [Eye Wellbeing](https://eyewellbeing.com/)",
+        "Android Development for [still waitin - Deb Manager for Android](https://play.google.com/store/apps/details?id=de.devmob.stillwaitin)",
+#        "Android Development for [fruit](#)",
+        "Program Committee [droidcon London](http://uk.droidcon.com/)"
+      ]
+    biography = """Friederike is a product-focused Android developer striving to create exceptional services.
+    She previously worked at [Badoo](https://badoo.com) and [Exozet](http://www.exozet.com) and is open for new [freelance work](https://www.upwork.com/o/profiles/users/_~012d693722fdfb39af/)."""
+
+
+  # Contact form settings
+
+  [params.contact]
+    # The contact form uses www.formspree.io as a p
+    # roxy. The form makes a POST request to their servers to send the actual email. 
+    # Visitors can send up to a 1000 emails each month for free.
+    # What you need to do for the setup?
+    #
+    # - upload the generated site to your server
+    # - send a dummy email yourself to confirm your account
+    # - click the confirm link in the email from www.formspree.io
+    # - you're done. Happy mailing!
+
+    email = "interest@friederikewild.me"
+
+    # It is possible to substitute formspring with other providers
+    # as an example the mailout plugin from caddy.
+    # Provide the post URL for the form and depending on the provider
+    # add some custom JS script to finish the implementation.
+
+    #postURL = "https://example.com/mailout/"
+
+    enable = false
+    title = "Get in Touch!"
+    namePlaceholder = "Name"
+    emailPlaceholder = "Email"
+    messagePlaceholder = "Message"
+    buttonText = "Send it"
+    success = "Thank you for contacting us."
+    error = "Message could not be send. Please contact us at "
+
+    # Google invisible captcha
+    #[params.contact.captcha]
+    #  sitekey = ""
+
+
+
+    # Add optional form fields to identify contact forms.
+    #[[params.contact.fields.hidden]]
+    #  name = "someID"
+    #  value = "example.com"
+
+    #[[params.contact.fields.hidden]]
+    # Special values for name such as "page" and "site" will be autofilled
+    #  name = "page"
+
+
+  # Social settings
+  # You may change these with your social links or add others
+
+  [[params.social]]
+    title = "LinkedIn"
+    icon = "fa-linkedin"
+    link = "https://www.linkedin.com/in/friederike-wild/"
+    target = "_blank"
+
+  [[params.social]]
+    title = "Github"
+    icon = "fa-github"
+    link = "https://github.com/friederikewild"
+    target = "_blank"
+
+  [[params.social]]
+    title = "Instagram"
+    icon = "fa-instagram"
+    link = "https://www.instagram.com/fithappybeing/"
+    target = "_blank"
+
+  [[params.social]]
+    title = "Facebook"
+    icon = "fa-facebook"
+    link = "https://www.facebook.com/EyeWellbeing"
+    target = "_blank"
+
+#  [[params.social]]
+#    title = "Eye Wellbeing"
+#    icon = "fa-eye"
+#    link = "https://eyewellbeing.com/"
+#    target = "_blank"
+
+ [[params.social]]
+    title = "interest@friederikewild.me"
+    icon = "fa-envelope"
+    link = "mailto:interest@friederikewild.me"
+
+
+  # Footer settings
+  [params.footer]
+    # If copyright is not set, author is used
+    copyright = "Friederike Wild"
+
+  # Page license
+  # [params.license]
+  #   link = "https://creativecommons.org/licenses/by-sa/4.0/legalcode"
+  #   name = "CC-BY-SA-4.0"
+
+  # Credits
+  [[params.credits]]
+    # Title is used as URL text
+    title = "HTML5UP"
+    # Text will be used to explain the credit
+    text = "Built with Hugo | Design by"
+    link = "https://html5up.net"
