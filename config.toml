@@ -56,53 +56,6 @@ googleAnalytics = "UA-49040977-4"
     She previously worked at [Badoo](https://badoo.com) and [Exozet](http://www.exozet.com) and is open for new [freelance work](https://www.upwork.com/o/profiles/users/_~012d693722fdfb39af/)."""
 
 
-  # Contact form settings
-
-  [params.contact]
-    # The contact form uses www.formspree.io as a proxy. 
-    # The form makes a POST request to their servers to send the actual email. 
-    # Visitors can send up to a 1000 emails each month for free.
-    # What you need to do for the setup?
-    #
-    # - upload the generated site to your server
-    # - send a dummy email yourself to confirm your account
-    # - click the confirm link in the email from www.formspree.io
-    # - you're done. Happy mailing!
-
-    email = "interest@friederikewild.me"
-
-    # It is possible to substitute formspring with other providers
-    # as an example the mailout plugin from caddy.
-    # Provide the post URL for the form and depending on the provider
-    # add some custom JS script to finish the implementation.
-
-    #postURL = "https://example.com/mailout/"
-
-    enable = false
-    title = "Get in Touch!"
-    namePlaceholder = "Name"
-    emailPlaceholder = "Email"
-    messagePlaceholder = "Message"
-    buttonText = "Send it"
-    success = "Thank you for contacting me."
-    error = "Message could not be send. Please contact me at "
-
-    # Google invisible captcha
-    #[params.contact.captcha]
-    #  sitekey = ""
-
-
-
-    # Add optional form fields to identify contact forms.
-    #[[params.contact.fields.hidden]]
-    #  name = "someID"
-    #  value = "example.com"
-
-    #[[params.contact.fields.hidden]]
-    # Special values for name such as "page" and "site" will be autofilled
-    #  name = "page"
-
-
   # Social settings
   # You may change these with your social links or add others
 
@@ -159,3 +112,53 @@ googleAnalytics = "UA-49040977-4"
     # Text will be used to explain the credit
     text = "Built with Hugo | Design by"
     link = "https://html5up.net"
+
+
+
+
+  # Contact form settings
+
+  [params.contact]
+    # The contact form uses www.formspree.io as a proxy. 
+    # The form makes a POST request to their servers to send the actual email. 
+    # Visitors can send up to a 1000 emails each month for free.
+    # What you need to do for the setup?
+    #
+    # - upload the generated site to your server
+    # - send a dummy email yourself to confirm your account
+    # - click the confirm link in the email from www.formspree.io
+    # - you're done. Happy mailing!
+
+    email = "interest@friederikewild.me"
+
+    # It is possible to substitute formspring with other providers
+    # as an example the mailout plugin from caddy.
+    # Provide the post URL for the form and depending on the provider
+    # add some custom JS script to finish the implementation.
+
+    #postURL = "https://example.com/mailout/"
+
+    enable = false
+    title = "Get in Touch!"
+    namePlaceholder = "Name"
+    emailPlaceholder = "Email"
+    messagePlaceholder = "Message"
+    buttonText = "Send it"
+    success = "Thank you for contacting me."
+    error = "Message could not be send. Please contact me at "
+
+    # Google invisible captcha
+    #[params.contact.captcha]
+    #  sitekey = ""
+
+
+
+    # Add optional form fields to identify contact forms.
+    #[[params.contact.fields.hidden]]
+    #  name = "someID"
+    #  value = "example.com"
+
+    #[[params.contact.fields.hidden]]
+    # Special values for name such as "page" and "site" will be autofilled
+    #  name = "page"
+
