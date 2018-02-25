@@ -28,7 +28,7 @@ googleAnalytics = "UA-49040977-4"
 
   # Link custom assets relative to /static
   #custom_js  = [""]
-  #custom_css = ["background.css", "icons.css"]
+  custom_css = ["custom.css", "background.css", "icons.css"]
  
 
   # Customization switches
@@ -59,8 +59,8 @@ googleAnalytics = "UA-49040977-4"
   # Contact form settings
 
   [params.contact]
-    # The contact form uses www.formspree.io as a p
-    # roxy. The form makes a POST request to their servers to send the actual email. 
+    # The contact form uses www.formspree.io as a proxy. 
+    # The form makes a POST request to their servers to send the actual email. 
     # Visitors can send up to a 1000 emails each month for free.
     # What you need to do for the setup?
     #
@@ -84,8 +84,8 @@ googleAnalytics = "UA-49040977-4"
     emailPlaceholder = "Email"
     messagePlaceholder = "Message"
     buttonText = "Send it"
-    success = "Thank you for contacting us."
-    error = "Message could not be send. Please contact us at "
+    success = "Thank you for contacting me."
+    error = "Message could not be send. Please contact me at "
 
     # Google invisible captcha
     #[params.contact.captcha]
