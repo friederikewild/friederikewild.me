@@ -1,0 +1,28 @@
+version: 2
+
+# Publish only changes pushed to `master` branch.
+general:
+  branches:
+    only:
+      - master
+
+jobs:
+  build:
+    docker:
+      # Set build environment to use same docker image as local docker-compose
+      - image: jguyomard/hugo-builder:0.32
+
+    steps:
+      # Inject created SSH key into container
+      - add_ssh_keys:
+          fingerprint: 69:60:b7:9f:0d:3f:db:94:a9:f7:f3:72:be:a7:26:56
+
+      # Configure git to be able to push
+      - run: git config --global user.email bot@friederikewild.me
+      - run: git config --global user.name CircleCI
+
+      # Checkout source code
+      - checkout
+
+      # Run publish script :-)
+      - run: .circleci/publish_to_ghpages
