@@ -25,4 +25,4 @@ jobs:
       - checkout
 
       # Run publish script :-)
-      - run: .circleci/publish_to_ghpages
+      - run: .circleci/publish_to_ghpages.sh
