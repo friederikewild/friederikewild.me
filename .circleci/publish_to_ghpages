@@ -2,43 +2,57 @@
 
 set -e
 
-if [[ $(git status -s) ]]
-then
-    echo "The working directory is dirty. Please commit any pending changes."
-    exit 1;
+#if [[ $(git status -s) ]]
+#then
+#    echo "The working directory is dirty. Please commit any pending changes."
+#    exit 1;
+
+
+
+PUBLIC="public"
+
+if [[ $FOLDER ]]; then
+	DIR=$FOLDER$PUBLIC
+else
+	DIR="../"$PUBLIC
 fi
 
-echo "Deleting old publication"
-rm -rf public
-git worktree prune
 
-echo "Checking out master branch into public"
-git worktree add -B master public origin/master
+echo "Using folder $PUBLIC"
+
+
+echo "Deleting old publication"
+rm -rf $PUBLIC
+mkdir $PUBLIC
+git worktree prune
+rm -rf .git/worktrees/$PUBLIC/
+
+echo "Checking out gh-pages branch into public"
+git worktree add -B gh-pages $PUBLIC origin/gh-pages
+
 
 echo "Removing existing files"
-rm -rf public/*
+rm -rf $PUBLIC/*
 
 echo "Generating site"
 hugo
 
 
-echo "Copying circleCI config"
-cp -R .circleci public/
+timestamp=$(date +%s%3N)
 
-echo "Updating master branch"
+echo "Updating gh-pages branch"
 if [[ $CI ]]; then
-  message="[CI] publish_to_gphages.sh"
+  message="* [CI] Publishing to gh-pages $timestamp"
 else
-  message="publish_to_ghpages.sh"
+  message="* Publishing to gh-pages $timestamp"
 fi
 
-timestamp=$(date +%s%3N)
 echo "Publishing version $timestamp"
-cd public && \
+cd $PUBLIC && \
   git add --all && \
   git commit -m "$message" && \
   git tag "$timestamp" && \
-  git push origin master && \
+  git push origin gh-pages && \
   git push origin "$timestamp"
 
 echo "Published version $timestamp"
