@@ -10,6 +10,9 @@ then
     exit 1;
 fi
 
+# Change current folder
+cd ..
+
 # Remove public directory and clean information about git worktrees
 echo "Deleting old publication"
 rm -rf public
