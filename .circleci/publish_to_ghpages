@@ -1,0 +1,46 @@
+#!/bin/sh
+
+set -e
+
+if [[ $(git status -s) ]]
+then
+    echo "The working directory is dirty. Please commit any pending changes."
+    exit 1;
+fi
+
+echo "Deleting old publication"
+rm -rf public
+git worktree prune
+
+echo "Checking out master branch into public"
+git worktree add -B master public origin/master
+
+echo "Removing existing files"
+rm -rf public/*
+
+echo "Generating site"
+hugo
+
+echo "Copying CNAME"
+cp CNAME public/
+
+echo "Copying circleCI config"
+cp -R .circleci public/
+
+echo "Updating master branch"
+if [[ $CI ]]; then
+  message="[CI] publish_to_gphages.sh"
+else
+  message="publish_to_ghpages.sh"
+fi
+
+timestamp=$(date +%s%3N)
+echo "Publishing version $timestamp"
+cd public && \
+  git add --all && \
+  git commit -m "$message" && \
+  git tag "$timestamp" && \
+  git push origin master && \
+  git push origin "$timestamp"
+
+echo "Published version $timestamp"
