@@ -12,6 +12,8 @@ jobs:
       # Set build environment to use same docker image as local docker-compose
       - image: jguyomard/hugo-builder:0.32
 
+    working_directory: ~/code
+
     steps:
       # Inject created SSH key into container
       - add_ssh_keys:
