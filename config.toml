@@ -46,14 +46,16 @@ googleAnalytics = "UA-49040977-4"
     position = "Entrepreneur / Android Engineer / Wellbeing Coach"
     livesIn = "[London, United Kingdom](https://www.google.co.uk/maps/place/WeWork+London+Fields/)"
     scope = [
-#        "Android Development for [Pvlse](#)",
+        "Android Development for [PVLSE](https://thepvlse.com/)",
         "Coach for [Eye Wellbeing](https://eyewellbeing.com/)",
         "Android Development for [still waitin - Debt Manager for Android](https://play.google.com/store/apps/details?id=de.devmob.stillwaitin)",
 #        "Android Development for [fruit](#)",
         "Program Committee [droidcon London](http://uk.droidcon.com/)"
       ]
     biography = """Friederike is a product-focused Android developer striving to create exceptional services.
-    She previously worked at [Badoo](https://badoo.com) and [Exozet](http://www.exozet.com) and is open for new [freelance work](https://www.upwork.com/o/profiles/users/_~012d693722fdfb39af/)."""
+    She currently works for the startup [PVLSE](https://www.linkedin.com/company/thepvlse/) and previously worked at [Badoo](https://badoo.com) and [Exozet](http://www.exozet.com)."""
+
+# Open for new [freelance work](https://www.upwork.com/o/profiles/users/_~012d693722fdfb39af/)
 
 
   # Social settings
