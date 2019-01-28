@@ -17,7 +17,8 @@ jobs:
     steps:
       # Inject created SSH key into container
       - add_ssh_keys:
-          fingerprints: ff:d6:2a:ea:37:31:08:01:e0:40:2a:e7:25:24:99:3c
+        fingerprints:
+          - "ff:d6:2a:ea:37:31:08:01:e0:40:2a:e7:25:24:99:3c"
 
       # Configure git to be able to push
       - run: git config --global user.email bot@friederikewild.me
